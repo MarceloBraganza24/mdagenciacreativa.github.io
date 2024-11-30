@@ -1,0 +1,22 @@
+.footer {
+    background: linear-gradient(to left, black 20%, #fdd100 80%);
+    width: 100%;
+    height: auto;
+    @include disfc;
+    padding: 2vh 0vh;
+    &__copyright {
+        font-size: 20px;
+        color: white;
+    }
+}
+
+@media (max-width: 480px) {
+.footer {
+    width: 100%;
+    height: auto;
+    @include disfc;
+    &__copyright {
+        font-size: 12px;
+    }
+}
+}
