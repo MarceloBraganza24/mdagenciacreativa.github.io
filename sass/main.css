@@ -9,150 +9,44 @@ body {
   background-color: #e6e6ee;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes slideRight {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes slideLeft {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animated {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-out;
+/* transiciones */
+.fade-in {
+  transform: translateY(10px);
 }
 
-.slide-right {
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
   transform: translateX(-100%);
 }
 
-.slide-left {
-  transform: translateX(100%);
-}
-
-.fade-in {
-  transform: translateY(20px);
-}
-
-.slide-in {
-  transform: translateY(100px);
-}
-
-.show {
-  visibility: visible;
+.slide-in-left.visible {
   opacity: 1;
+  transform: translateX(0);
 }
 
-.show.slide-right {
-  animation: slideRight 0.5s ease-out forwards;
+.zoom-in {
+  transform: scale(0.5);
 }
 
-.show.slide-left {
-  animation: slideLeft 0.5s ease-out forwards;
+.zoom-in.visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.show.fade-in {
-  animation: fadeIn 2.5s ease-out forwards;
+.rotate {
+  transform: rotate(-90deg);
 }
 
-.show.slide-in {
-  animation: slideIn 0.5s ease-out forwards;
+.rotate.visible {
+  opacity: 1;
+  transform: rotate(0deg);
 }
 
-/* @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(100px); 
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0); 
-    }
-}
-
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-//animation: fadeIn 2s ease-in;
-
-@keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-}  
-//animation: pulse 1.5s;
-
-@keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-}
-//animation: slideUp 2s ease-out forwards;
-
-@keyframes slideRight {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-}
-//animation: slideRight 2s ease-out forwards;
- */
+/* transiciones */
 .simpleSeparatorContainer {
   background-color: #e6e6ee;
   width: 100%;
@@ -219,6 +113,8 @@ body {
   font-size: 30px;
   text-align: justify;
   color: white;
+  opacity: 0;
+  transition: all 1s ease;
 }
 .main__aboutContainer {
   background: linear-gradient(to left, #b7b7be 10%, black 90%);
@@ -246,6 +142,8 @@ body {
   border-bottom-right-radius: 30%;
   padding: 10vh;
   box-shadow: 4px 4px 10px black, -4px -4px 10px black;
+  opacity: 0;
+  transition: all 1s ease;
 }
 .main__aboutContainer__textContainer__text__title {
   width: 100%;
@@ -285,6 +183,8 @@ body {
   padding-right: 15vh;
   padding: 0vh 15vh 4vh 0vh;
   font-size: 40px;
+  opacity: 0;
+  transition: all 1s ease;
 }
 .main__ourServicesContainer__allServiceCardContainer {
   width: 100%;
@@ -308,6 +208,8 @@ body {
   box-shadow: 4px 4px 10px #fdd100, -4px -4px 10px black;
   padding: 8vh 4vh;
   transition: transform 0.5s ease-in-out; /* Duración de la transición */
+  opacity: 0;
+  transition: all 1s ease;
 }
 .main__ourServicesContainer__allServiceCardContainer__serviceCardContainer__serviceCard:hover {
   transform: scale(1.1);
@@ -360,6 +262,8 @@ body {
   color: black;
   padding-right: 15vh;
   font-size: 40px;
+  opacity: 0;
+  transition: all 1s ease;
 }
 .main__contactContainer__allContactContainer {
   width: 100%;
@@ -386,6 +290,8 @@ body {
   border-bottom-right-radius: 50%;
   padding: 10vh;
   box-shadow: 4px 4px 10px black, -4px -4px 10px black;
+  opacity: 0;
+  transition: all 1s ease;
 }
 .main__contactContainer__allContactContainer__dataContainer__data__title {
   font-size: 45px;
@@ -712,6 +618,8 @@ body {
     font-size: 14px;
     text-align: justify;
     color: white;
+    opacity: 0;
+    transition: all 1s ease;
   }
   .main__homeContainer {
     display: none;
