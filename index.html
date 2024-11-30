@@ -26,26 +26,33 @@
             </div>
         </div>
 
-        <div class="menuOptionsContainer">
-            <div class="menuOptionsContainer__closeW">X</div>
-        </div>
-
     </header>
 
-    <div class="headerMobile">
+    <div id="headerMobile" class="headerMobile">
         <div></div>
         <div class="headerMobile__logo">
             <img class="headerMobile__logo__prop" src="img/logo.png" alt="logomdagenciacreativa">
         </div>
         <div class="headerMobile__menu">
-            <div class="headerMobile__menu__linea">
+            <div id="hmenu" class="headerMobile__menu__linea">
                 <div class="headerMobile__menu__linea__prop"></div>
                 <div class="headerMobile__menu__linea__prop"></div>
                 <div class="headerMobile__menu__linea__prop"></div>
             </div>
         </div>
     </div>
-
+    
+    <div id="menuOptionsContainer" class="menuOptionsContainer">
+        <!-- <div class="menuOptionsContainer__closeW">
+            <div id="btnCloseHMenu" class="menuOptionsContainer__closeW__x">X</div>
+        </div> -->
+        <div class="menuOptionsContainer__options">
+            <div id="homeBtnMobile" class="menuOptionsContainer__options__option">Home</div>
+            <div id="aboutBtnMobile" class="menuOptionsContainer__options__option">Quienes somos</div>
+            <div id="ourServicesBtnMobile" class="menuOptionsContainer__options__option">Nuestros servicios</div>
+            <div id="contactBtnMobile" class="menuOptionsContainer__options__option">Contactanos</div>
+        </div>
+    </div>
     <!-- <div class="emptySpace"></div> -->
 
     <main class="main">
@@ -77,7 +84,7 @@
             <div class="main__aboutContainer__textContainer">
 
                 <p class="main__aboutContainer__textContainer__text">
-                    <strong>¿Quiénes Somos?</strong><br>
+                    <strong class="main__aboutContainer__textContainer__text__title">¿Quiénes Somos?</strong><br>
                     Somos un equipo apasionado por el mundo digital, especializado en la gestión de comunidades online. Creemos en el poder de las redes sociales para conectar marcas con personas, crear conversaciones significativas y construir relaciones duraderas.<br>
                     Como expertos en Community Management, trabajamos con creatividad, estrategia y empatía para potenciar tu presencia online. Nuestro compromiso es entender la esencia de tu marca, amplificar tu mensaje y convertir seguidores en clientes leales.<br>
                     ¡Juntos podemos hacer que tu marca sea parte de la conversación!
@@ -167,19 +174,21 @@
                     
                     <div class="main__contactContainer__allContactContainer__formContainer__form">
 
+                        <div class="main__contactContainer__allContactContainer__formContainer__form__phrase">Envianos aquí tu consulta por correo electrónico</div>
+
                         <div class="main__contactContainer__allContactContainer__formContainer__form__item">
 
                             <div class="main__contactContainer__allContactContainer__formContainer__form__item__left">
                                 <h4 class="main__contactContainer__allContactContainer__formContainer__form__item__left__label">Nombre *</h4>
                                 <div class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer">
-                                    <input class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
+                                    <input id="inputFirstNameContact" class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
                                 </div>
                             </div>
 
                             <div class="main__contactContainer__allContactContainer__formContainer__form__item__left">
                                 <h4 class="main__contactContainer__allContactContainer__formContainer__form__item__left__label">Apellido *</h4>
                                 <div class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer">
-                                    <input class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
+                                    <input id="inputLastNameContact" class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
                                 </div>
                             </div>
                             
@@ -190,14 +199,14 @@
                             <div class="main__contactContainer__allContactContainer__formContainer__form__item__left">
                                 <h4 class="main__contactContainer__allContactContainer__formContainer__form__item__left__label">Correo electrónico *</h4>
                                 <div class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer">
-                                    <input class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
+                                    <input class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="email">
                                 </div>
                             </div>
 
                             <div class="main__contactContainer__allContactContainer__formContainer__form__item__left">
                                 <h4 class="main__contactContainer__allContactContainer__formContainer__form__item__left__label">Teléfono *</h4>
                                 <div class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer">
-                                    <input class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
+                                    <input id="inputPhoneContact" class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
                                 </div>
                             </div>
 
@@ -208,6 +217,10 @@
                             <div class="main__contactContainer__allContactContainer__formContainer__form__msjContainer__textAreaContainer">
                                 <textarea class="main__contactContainer__allContactContainer__formContainer__form__msjContainer__textAreaContainer__textArea" name="" id=""></textarea>
                             </div>
+                        </div>
+
+                        <div class="main__contactContainer__allContactContainer__formContainer__form__btnContainer">
+                            <button class="main__contactContainer__allContactContainer__formContainer__form__btnContainer__btn">Enviar</button>
                         </div>
 
                     </div>
@@ -224,7 +237,7 @@
         <div class="footer__copyright">© | MB Soluciones Informáticas</div>
     </footer>
 
-    <!-- <script src="js/index.js"></script> -->
+    <script src="js/index.js"></script>
     
 </body>
 </html>

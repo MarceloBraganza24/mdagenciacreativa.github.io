@@ -1,6 +1,5 @@
 .header {
     background: linear-gradient(to left, black 20%, #fdd100 80%);
-    //background-color: #fdd100;
     width: 100%;
     height: 12vh;
     display: grid;
@@ -11,7 +10,9 @@
     animation: pulse 1.5s;
     position: fixed;
     transition: top 0.5s ease-in-out;
+    opacity: 90%;
     z-index: 1;
+    box-shadow: 4px 4px 10px black, -4px -4px 10px black;
     &__logoContainer {
         width: 100%;
         height: auto;
@@ -38,7 +39,7 @@
             grid-column: 2/3;
             gap: 2vh;
             &__item {
-                font-size: 20px;
+                font-size: 18px;
                 color: white;
                 &:hover {
                     color: #fdd100;
@@ -49,6 +50,9 @@
     }
 }
 .headerMobile {
+    display: none;
+}
+.menuOptionsContainer {
     display: none;
 }
 
@@ -64,6 +68,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     border-bottom-left-radius: 20%;
     border-top-right-radius: 20%;
+    position: fixed;
+    opacity: 90%;   
+    animation: pulse 1.5s;
+    transition: top 0.5s ease-in-out;
+    box-shadow: 4px 4px 10px black, -4px -4px 10px black;
     &__logo {
         width: 100%;
         height: auto;
@@ -73,7 +82,6 @@
         }
     }
     &__menu {
-        //background-color: saddlebrown;
         width: 100%;
         height: auto;
         display: flex;
@@ -83,7 +91,6 @@
         color: white;
         gap: 1vh;
         &__linea {
-            //background-color: salmon;
             width: 25%;
             height: auto;
             display: flex;
@@ -101,33 +108,38 @@
 .menuOptionsContainer {
     background-color: black;
     width: 100%;
-    height: 100px;
-    display: block;
-    position: absolute;
+    height: auto;
+    display: none;
+    position: fixed;
+    margin-top: 12vh;
+    border-top-left-radius: 20%;
+    padding: 4vh 0vh;
+    z-index: 1;
+    opacity: 95%;
     &__closeW {
         width: 100%;
         height: auto;
+        display: flex;
+        justify-content: end;
         &__x {
             font-size: 20px;
+            padding-right: 2vh;
+            color: white;
+        }
+    }
+    &__options {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        &__option {
+            color: white;
+            padding-left: 2vh;
+            &:hover {
+                color: #fdd100;
+            }
         }
     }
 }
 }
-
-/* &__hMenu {
-    width: 7vh;
-    height: 7vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    &:hover {
-        cursor: pointer;
-    }
-    &__line {
-        background-color: #d2b569;
-        width: 100%;
-        height: 1vh;
-        border-radius: 1vh;
-    }
-} */
